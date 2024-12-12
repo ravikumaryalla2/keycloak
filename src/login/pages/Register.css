@@ -1,0 +1,22 @@
+.kcFormOptionsClass {
+    margin-top: 1rem;
+}
+
+.kcFormClass {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    /* grid-template-rows: auto auto auto auto auto;  */
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+}
+
+/* Div 2 and Div 3 should span 1 column each */
+.kcFormClass > div:nth-child(2),
+.kcFormClass > div:nth-child(3) {
+    grid-column: span 1;
+}
+
+/* All other divs (excluding div 2 and div 3) should span 2 columns */
+.kcFormClass > div:not(:nth-child(2)):not(:nth-child(3)) {
+    grid-column: span 2; /* Span full width */
+}

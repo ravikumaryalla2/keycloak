@@ -1,0 +1,28 @@
+<#macro emailLayout>
+
+<html>
+    <head>
+        <style>
+            .email-body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background-color:whitesmoke;
+                width: 75vw;
+                height: max-content;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .tinylogo{
+                color: #1C3693;
+
+            }
+        </style>
+    </head>
+    <body class='email-body'>
+        <h1 class="tinylogo">Tiny Command</h1>
+    
+        <#nested>
+
+    </body>
+</html>
+</#macro>

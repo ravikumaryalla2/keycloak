@@ -9,7 +9,7 @@ import { getKcContextMock } from "./login/KcPageStory";
 
 if (import.meta.env.DEV) {
     window.kcContext = getKcContextMock({
-        pageId: "login-idp-link-email.ftl",
+        pageId: "login-page-expired.ftl",
         overrides: {}
     });
 }

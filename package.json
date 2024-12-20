@@ -18,12 +18,12 @@
     "keywords": [],
     "dependencies": {
         "keycloakify": "^11.3.31",
-        "oute-ds-alert": "^2.2.82",
-        "oute-ds-button": "^2.2.36",
-        "oute-ds-icon": "^2.2.76",
-        "oute-ds-label": "^2.2.26",
-        "oute-ds-text-field": "^2.2.84",
-        "oute-tokens": "^1.0.6",
+        "oute-ds-alert": "^2.2.89",
+        "oute-ds-button": "^2.2.39",
+        "oute-ds-icon": "^2.2.83",
+        "oute-ds-label": "^2.2.29",
+        "oute-ds-text-field": "^2.2.92",
+        "oute-tokens": "^1.0.8",
         "react": "^18.3.1",
         "react-dom": "^18.3.1"
     },

@@ -12,7 +12,7 @@ export default function Error(props: PageProps<Extract<KcContext, { pageId: "err
     const { message, client, skipLink } = kcContext;
 
     const { msg } = i18n;
-    console.log(client);
+    // console.log(client);
 
     return (
         <Template

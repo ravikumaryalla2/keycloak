@@ -1,0 +1,14 @@
+.page-expired {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+/* .error-image {
+    background: url("../assets/GenericError.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 20rem;
+} */

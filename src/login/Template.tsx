@@ -209,7 +209,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                         id="reset-login"
                                         href={url.loginRestartFlowUrl}
                                         aria-label={msgStr("restartLoginTooltip")}
-                                        style={{ textDecoration: "none" }}
+                                        style={{ textDecoration: "none", fontFamily: "Inter" }}
                                     >
                                         <div className="kc-login-tooltip">
                                             <i className={kcClsx("kcResetFlowIcon")}></i>
@@ -266,7 +266,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                 <div className={kcClsx("kcFormGroupClass")}>
                                     <input type="hidden" name="tryAnotherWay" value="on" />
                                     <a
-                                        style={{ textDecoration: "none" }}
+                                        style={{ textDecoration: "none", fontFamily: "Inter" }}
                                         href="#"
                                         id="try-another-way"
                                         onClick={() => {
@@ -295,9 +295,10 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                             //     xl: "0.8rem" // Extra large
                                             // },
                                             // fontSize: "0.8rem",
+                                            fontFamily: "Inter",
+
                                             fontWeight: "400",
-                                            color: "#2196F3",
-                                            fontFamily: "Inter"
+                                            color: "#2196F3"
                                         }}
                                     />
                                 </a>
@@ -314,9 +315,9 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                             //     xl: "0.8rem" // Extra large
                                             // },
                                             // fontSize: "0.8rem",
+                                            fontFamily: "Inter",
                                             fontWeight: "400",
-                                            color: "#2196F3",
-                                            fontFamily: "Inter"
+                                            color: "#2196F3"
                                         }}
                                     />
                                 </a>
@@ -337,9 +338,9 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                         //     lg: "0.75rem", // Large
                                         //     xl: "0.8rem" // Extra large
                                         // },
+                                        fontFamily: "Inter",
                                         fontSize: "0.8rem",
-                                        fontWeight: "400",
-                                        fontFamily: "Inter"
+                                        fontWeight: "400"
                                     }}
                                 />
                                 <a
@@ -351,11 +352,12 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                         variant="text"
                                         children={kcContext.pageId == "login.ftl" ? "Sign Up" : "Sign In"}
                                         sx={{
+                                            fontFamily: "Inter",
+
                                             fontSize: "0.8rem",
                                             fontWeight: "400",
                                             color: "#2196F3",
-                                            padding: "0rem",
-                                            fontFamily: "Inter"
+                                            padding: "0rem"
                                         }}
                                         // sx={{
                                         //     fontSize: "0.8rem",

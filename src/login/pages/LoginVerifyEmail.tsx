@@ -21,7 +21,7 @@ export default function LoginVerifyEmail(props: PageProps<Extract<KcContext, { p
                 //headerNode={msg("emailVerifyTitle")}
                 headerMsg={msg("emailVerifyTitle")}
                 infoNode={
-                    <ODSLabel className="instruction" variant="subtitle1">
+                    <ODSLabel className="instruction" variant="subtitle1" sx={{ fontFamily: "Inter" }}>
                         {msg("emailVerifyInstruction2")}
                         <span style={{ marginLeft: "5px" }}>
                             <a href={url.loginAction}>{msg("doClickHere")}</a>
@@ -31,7 +31,7 @@ export default function LoginVerifyEmail(props: PageProps<Extract<KcContext, { p
                     </ODSLabel>
                 }
             >
-                <ODSLabel className="instruction" variant="subtitle1">
+                <ODSLabel className="instruction" variant="subtitle1" sx={{ fontFamily: "Inter" }}>
                     {msg("emailVerifyInstruction1", user?.email ?? "")}
                 </ODSLabel>
             </Template>

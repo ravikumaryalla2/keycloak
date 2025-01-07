@@ -88,7 +88,14 @@ export default function LoginResetPassword(props: PageProps<Extract<KcContext, {
                             type="submit"
                             value={msgStr("doSubmit")}
                         /> */}
-                        <ODSButton type="submit" children={msgStr("doSubmit")} fullWidth />
+                        <ODSButton
+                            type="submit"
+                            children={msgStr("doSubmit")}
+                            fullWidth
+                            sx={{
+                                fontFamily: "Inter"
+                            }}
+                        />
                     </div>
 
                     <div id="kc-form-options" className={kcClsx("kcFormOptionsClass")}>
@@ -96,7 +103,15 @@ export default function LoginResetPassword(props: PageProps<Extract<KcContext, {
                             <span>
                                 {/* <a href={url.loginUrl}>{msg("backToLogin")}</a> */}
                                 <a href={url.loginUrl} style={{ textDecoration: "none" }}>
-                                    <ODSButton variant="text" children="BACK TO LOGIN" size="small" fullWidth />
+                                    <ODSButton
+                                        variant="text"
+                                        children="BACK TO LOGIN"
+                                        size="small"
+                                        fullWidth
+                                        sx={{
+                                            fontFamily: "Inter"
+                                        }}
+                                    />
                                 </a>
                             </span>
                         </div>

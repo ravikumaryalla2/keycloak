@@ -38,13 +38,15 @@ export default function LoginPageExpired(props: PageProps<Extract<KcContext, { p
                     <img src={GenericError} alt="Error" style={{ width: "100%", objectFit: "contain" }} />
                 </div>
                 <div className="error-text">
-                    <ODSLabel variant="body1" sx={{ color: "#607D8B" }}>
+                    <ODSLabel variant="body1" sx={{ color: "#607D8B", fontFamily: "Inter" }}>
                         Your login session has timed out due to inactivity.
                     </ODSLabel>
                 </div>
                 <div className="error-button">
                     <a href={url.loginAction}>
-                        <ODSButton variant="text">GO BACK TO LOGIN </ODSButton>
+                        <ODSButton variant="text" sx={{ fontFamily: "Inter" }}>
+                            GO BACK TO LOGIN{" "}
+                        </ODSButton>
                     </a>
                 </div>
             </div>

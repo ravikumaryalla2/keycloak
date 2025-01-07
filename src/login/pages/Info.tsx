@@ -64,7 +64,9 @@ export default function Info(props: PageProps<Extract<KcContext, { pageId: "info
                         return (
                             <a href={actionUri}>
                                 {" "}
-                                <ODSButton fullWidth>{msg("proceedWithAction")} </ODSButton>
+                                <ODSButton fullWidth sx={{ fontFamily: "Inter" }}>
+                                    {msg("proceedWithAction")}{" "}
+                                </ODSButton>
                             </a>
                         );
                     }
@@ -72,7 +74,9 @@ export default function Info(props: PageProps<Extract<KcContext, { pageId: "info
                     if (client.baseUrl) {
                         return (
                             <a href={client.baseUrl}>
-                                <ODSButton fullWidth>{msg("backToApplication")} </ODSButton>
+                                <ODSButton fullWidth sx={{ fontFamily: "Inter" }}>
+                                    {msg("backToApplication")}{" "}
+                                </ODSButton>
                             </a>
                         );
                     }

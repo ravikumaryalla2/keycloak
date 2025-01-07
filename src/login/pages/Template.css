@@ -30,7 +30,7 @@ body {
     background-image: url("../assets/background.svg");
     background: linear-gradient(113deg, #6ae2e2 -0.02%, #1c3693 59.84%); */
 
-    background: url("../assets/Background_1.svg"),
+    background: url("https://ccc.oute.app/test/1736245783055/login.svg"),
         linear-gradient(113deg, #6ae2e2 -0.02%, #1c3693 59.84%);
 
     background-position: center;

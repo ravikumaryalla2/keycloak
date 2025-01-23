@@ -131,7 +131,7 @@ export default function LoginUpdatePassword(props: PageProps<Extract<KcContext, 
                             type="submit"
                             value={msgStr("doSubmit")}
                         /> */}
-                            <ODSButton type="submit" children={msgStr("doSubmit")} fullWidth />
+                            <ODSButton type="submit" size="large" children={msgStr("doSubmit")} fullWidth />
                             {isAppInitiatedAction && (
                                 // <button
                                 //     className={kcClsx("kcButtonClass", "kcButtonDefaultClass", "kcButtonLargeClass")}

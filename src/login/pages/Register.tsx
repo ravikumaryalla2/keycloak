@@ -128,6 +128,7 @@ export default function Register(props: RegisterProps) {
                                 <ODSButton
                                     type="submit"
                                     label={msgStr("doRegister")}
+                                    size="large"
                                     sx={{
                                         fontFamily: "Inter"
                                         // height: {

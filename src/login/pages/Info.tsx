@@ -55,7 +55,7 @@ export default function Info(props: PageProps<Extract<KcContext, { pageId: "info
 
                     if (pageRedirectUri) {
                         return (
-                            <ODSButton fullWidth>
+                            <ODSButton fullWidth size="large">
                                 <a href={pageRedirectUri}>{msg("backToApplication")}</a>
                             </ODSButton>
                         );
@@ -64,7 +64,7 @@ export default function Info(props: PageProps<Extract<KcContext, { pageId: "info
                         return (
                             <a href={actionUri}>
                                 {" "}
-                                <ODSButton fullWidth sx={{ fontFamily: "Inter" }}>
+                                <ODSButton size="large" fullWidth sx={{ fontFamily: "Inter" }}>
                                     {msg("proceedWithAction")}{" "}
                                 </ODSButton>
                             </a>
@@ -74,7 +74,7 @@ export default function Info(props: PageProps<Extract<KcContext, { pageId: "info
                     if (client.baseUrl) {
                         return (
                             <a href={client.baseUrl}>
-                                <ODSButton fullWidth sx={{ fontFamily: "Inter" }}>
+                                <ODSButton size="large" fullWidth sx={{ fontFamily: "Inter" }}>
                                     {msg("backToApplication")}{" "}
                                 </ODSButton>
                             </a>

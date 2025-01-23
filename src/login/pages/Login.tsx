@@ -97,6 +97,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                                 // startIcon={`${p.iconClasses && <i className={clsx(kcClsx("kcCommonLogoIdP"), p.iconClasses)} aria-hidden="true"></i>}`}
                                                 label={p.displayName}
                                                 startIcon={<img src={getLogo(p.alias)} alt="Google Logo" style={{ height: "1.3rem" }} />}
+                                                size="large"
                                                 sx={{ color: "#000", fontFamily: "Inter" }}
                                                 fullWidth
                                                 variant="outlined"
@@ -292,6 +293,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                     children={msgStr("doLogIn")}
                                     disabled={isLoginButtonDisabled}
                                     tabIndex={4}
+                                    size="large"
                                     sx={{
                                         fontFamily: "Inter"
                                         // height: {

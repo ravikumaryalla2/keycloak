@@ -89,6 +89,7 @@ export default function LoginResetPassword(props: PageProps<Extract<KcContext, {
                             value={msgStr("doSubmit")}
                         /> */}
                         <ODSButton
+                            size="large"
                             type="submit"
                             children={msgStr("doSubmit")}
                             fullWidth
@@ -106,7 +107,7 @@ export default function LoginResetPassword(props: PageProps<Extract<KcContext, {
                                     <ODSButton
                                         variant="text"
                                         children="BACK TO LOGIN"
-                                        size="small"
+                                        size="large"
                                         fullWidth
                                         sx={{
                                             fontFamily: "Inter"

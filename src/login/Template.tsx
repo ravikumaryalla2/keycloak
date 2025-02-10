@@ -236,6 +236,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                             return node;
                         })()}
                     </header>
+
                     <div id="kc-content">
                         {/* App-initiated actions should not see warning messages about the need to complete the action during login. */}
                         {/* {displayMessage && message !== undefined && (message.type !== "warning" || !isAppInitiatedAction) && (
@@ -260,6 +261,8 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                     />
                                 </div>
                             )} */}
+                        {socialProvidersNode}
+
                         {children}
                         {auth !== undefined && auth.showTryAnotherWayLink && (
                             <form id="kc-select-try-another-way-form" action={url.loginAction} method="post">
@@ -279,7 +282,6 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                 </div>
                             </form>
                         )}
-                        {socialProvidersNode}
                         {displayInfo && infoNode}
                         {kcContext.pageId == "login.ftl" && (
                             <div className="terms-and-policy">
@@ -353,12 +355,14 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                         children={kcContext.pageId == "login.ftl" ? "Sign Up" : "Sign In"}
                                         sx={{
                                             fontFamily: "Inter",
+                                            minWidth: "max-content",
 
                                             fontSize: "0.8rem",
                                             fontWeight: "400",
                                             color: "#2196F3",
-                                            padding: "0rem"
+                                            padding: "0.5rem"
                                         }}
+
                                         // sx={{
                                         //     fontSize: "0.8rem",
                                         //     fontWeight: "400",

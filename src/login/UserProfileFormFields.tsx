@@ -436,7 +436,6 @@ function InputTag(props: InputFieldByTypeProps & { fieldIndex: number | undefine
                     return valueOrValues;
                 })()}
                 sx={{
-                    marginBottom: "1rem",
                     fontFamily: "Inter",
                     // fontSize: {
                     //     xs: "0.8rem" // Smaller font size for extra-small screens
@@ -458,6 +457,7 @@ function InputTag(props: InputFieldByTypeProps & { fieldIndex: number | undefine
                     }
                 }}
                 // className={kcClsx("kcInputClass")}
+                errorType="icon"
                 error={displayableErrors.find(error => error.fieldIndex === fieldIndex) !== undefined}
                 disabled={attribute.readOnly}
                 autoComplete={attribute.autocomplete}

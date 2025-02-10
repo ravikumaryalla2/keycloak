@@ -131,7 +131,7 @@ body {
 .login-form {
     display: grid;
     grid-template-rows: auto;
-    gap: 2.75rem;
+    gap: 2rem;
 }
 .login-footer {
     margin: 1.75rem 0rem 0rem 0rem;

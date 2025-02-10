@@ -65,12 +65,6 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                 <>
                     {realm.password && social?.providers !== undefined && social.providers.length !== 0 && (
                         <div id="kc-social-providers" className="social-providers-btn">
-                            <div className="seperation-line">
-                                <hr style={{ height: "0.5px" }} />
-                                <p style={{ margin: "0px" }}>or</p>
-                                <hr style={{ height: "0.5px" }} />
-                            </div>
-
                             {/* <h2>{msg("identity-provider-login-label")}</h2> */}
                             <ul
                                 // className={kcClsx("kcFormSocialAccountListClass", social.providers.length > 3 && "kcFormSocialAccountListGridClass")}
@@ -95,7 +89,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                             ></span> */}
                                             <ODSButton
                                                 // startIcon={`${p.iconClasses && <i className={clsx(kcClsx("kcCommonLogoIdP"), p.iconClasses)} aria-hidden="true"></i>}`}
-                                                label={p.displayName}
+                                                label={`${kcContext.pageId == "login.ftl" ? "Sign In" : "Register"} with ${p.displayName}`}
                                                 startIcon={<img src={getLogo(p.alias)} alt="Google Logo" style={{ height: "1.3rem" }} />}
                                                 size="large"
                                                 sx={{ color: "#000", fontFamily: "Inter" }}
@@ -113,6 +107,11 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                     </li>
                                 ))}
                             </ul>
+                            <div className="seperation-line">
+                                <hr style={{ height: "0.5px" }} />
+                                <p style={{ margin: "0px" }}>or</p>
+                                <hr style={{ height: "0.5px" }} />
+                            </div>
                         </div>
                     )}
                 </>
@@ -151,6 +150,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                         autoComplete="username"
                                         aria-invalid={messagesPerField.existsError("username", "password")}
                                     /> */}
+                                    {messagesPerField.existsError("username", "password")}
                                     <ODSTextField
                                         placeholder={
                                             !realm.loginWithEmailAllowed
@@ -165,6 +165,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                         id="username"
                                         autoFocus
                                         fullWidth
+                                        errorType="icon"
                                         error={messagesPerField.existsError("username", "password")}
                                         helperText={
                                             (messagesPerField.existsError("username", "password") &&
@@ -198,7 +199,13 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                             tabIndex={3}
                                             id="password"
                                             fullWidth
+                                            errorType="icon"
                                             error={messagesPerField.existsError("username", "password")}
+                                            helperText={
+                                                (messagesPerField.existsError("username", "password") &&
+                                                    kcSanitize(messagesPerField.getFirstError("username", "password"))) ||
+                                                ""
+                                            }
                                             sx={{
                                                 marginBottom: "0.5rem",
                                                 fontFamily: "Inter",

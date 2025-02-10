@@ -44,7 +44,7 @@ export default function LoginPageExpired(props: PageProps<Extract<KcContext, { p
                 </div>
                 <div className="error-button">
                     <a href={url.loginAction}>
-                        <ODSButton variant="text" sx={{ fontFamily: "Inter" }}>
+                        <ODSButton variant="text" size="large" sx={{ fontFamily: "Inter" }}>
                             GO BACK TO LOGIN{" "}
                         </ODSButton>
                     </a>

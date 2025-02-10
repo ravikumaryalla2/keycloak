@@ -41,7 +41,7 @@ export default function Error(props: PageProps<Extract<KcContext, { pageId: "err
                             <ODSButton
                                 variant="text"
                                 children={"BACK TO APPLICATION"}
-                                size="small"
+                                size="large"
                                 fullWidth
                                 sx={{
                                     fontFamily: "Inter"

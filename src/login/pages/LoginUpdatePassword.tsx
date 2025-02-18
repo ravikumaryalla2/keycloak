@@ -1,11 +1,13 @@
 //import { useEffect, useReducer } from "react";
-import { kcSanitize } from "keycloakify/lib/kcSanitize";
+// import { kcSanitize } from "keycloakify/lib/kcSanitize";
 //import { assert } from "keycloakify/tools/assert";
+
 import { getKcClsx, type KcClsx } from "keycloakify/login/lib/kcClsx";
 import type { PageProps } from "keycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
 import ODSTextField from "oute-ds-text-field";
+// import ODSLabel from "oute-ds-label";
 import ODSButton from "oute-ds-button";
 import "./LoginUpdatePassword.css";
 
@@ -58,10 +60,11 @@ export default function LoginUpdatePassword(props: PageProps<Extract<KcContext, 
                                 autoFocus
                                 fullWidth
                                 autoComplete="new-password"
-                                aria-invalid={messagesPerField.existsError("password", "password-confirm")}
+                                error={messagesPerField.existsError("password", "password-confirm")}
+                                helperText={messagesPerField.get("password")}
                             />
 
-                            {messagesPerField.existsError("password") && (
+                            {/* {messagesPerField.existsError("password") && (
                                 <span
                                     id="input-error-password"
                                     className={kcClsx("kcInputErrorMessageClass")}
@@ -70,7 +73,7 @@ export default function LoginUpdatePassword(props: PageProps<Extract<KcContext, 
                                         __html: kcSanitize(messagesPerField.get("password"))
                                     }}
                                 />
-                            )}
+                            )} */}
                         </div>
                     </div>
 
@@ -100,10 +103,11 @@ export default function LoginUpdatePassword(props: PageProps<Extract<KcContext, 
                                 autoFocus
                                 fullWidth
                                 autoComplete="new-password"
-                                aria-invalid={messagesPerField.existsError("password", "password-confirm")}
+                                error={messagesPerField.existsError("password", "password-confirm")}
+                                helperText={messagesPerField.get("password-confirm")}
                             />
 
-                            {messagesPerField.existsError("password-confirm") && (
+                            {/* {messagesPerField.existsError("password-confirm") && (
                                 <span
                                     id="input-error-password-confirm"
                                     className={kcClsx("kcInputErrorMessageClass")}
@@ -112,7 +116,7 @@ export default function LoginUpdatePassword(props: PageProps<Extract<KcContext, 
                                         __html: kcSanitize(messagesPerField.get("password-confirm"))
                                     }}
                                 />
-                            )}
+                            )} */}
                             <div className="logut-sessions-checkbox">
                                 <LogoutOtherSessions kcClsx={kcClsx} i18n={i18n} />
                             </div>
